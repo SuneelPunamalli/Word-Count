@@ -1,0 +1,38 @@
+package Main;
+import java.util.*;
+public class WordCount
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        // Start time
+        long startTime=System.currentTimeMillis();
+        // User input
+        String userInput=sc.nextLine();
+        // End time
+        long endTime=System.currentTimeMillis();
+        // Time taken
+        double timeTakenSeconds=(endTime-startTime)/1000.0;
+        // Word count
+        String[] typedWords=userInput.trim().isEmpty()?new String[0] :userInput.trim().split("\\s+");
+        int wordCount=typedWords.length;
+        // Character count (excluding spaces)
+        int charCount=userInput.replace(" ", "").length();
+        // WPM & CPM
+        double wpm=timeTakenSeconds>0?(wordCount/timeTakenSeconds)*60:0;
+        double cpm = timeTakenSeconds>0?(charCount/timeTakenSeconds)*60:0;
+        // Since no reference text, all words are considered wrong
+        int correctWords=0;
+        int wrongWords=wordCount;
+        double accuracy=0.0;
+        System.out.println("RESULTS");
+        System.out.printf("⏱ Time Taken        : %.2f seconds%n", timeTakenSeconds);
+        System.out.println("📝 Words Typed       : " + wordCount);
+        System.out.println("🔤 Characters Typed : " + charCount);
+        System.out.printf("🚀 Typing Speed     : %.2f WPM%n", wpm);
+        System.out.printf("⚡ Characters Speed : %.2f CPM%n", cpm);
+        System.out.println("✅ Correct Words     : " + correctWords);
+        System.out.println("❌ Wrong Words       : " + wrongWords);
+        System.out.printf("🎯 Accuracy          : %.2f%%%n", accuracy);
+    }
+}
