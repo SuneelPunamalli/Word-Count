@@ -1,2 +1,5 @@
 # Word-Count
-A Java-based Word Count application that measures typing performance by calculating words typed, character count, typing speed (WPM/CPM), time taken, and accuracy. It captures user input in real time and presents clear, structured results for performance analysis.
+Developed a Java-based Word Count application designed to evaluate and analyze typing performance in real time.
+Measures total words typed, character count, and calculates typing speed in terms of Words Per Minute (WPM) and Characters Per Minute (CPM).
+Tracks the total time taken to complete the typing task and computes overall accuracy to provide precise performance insights.
+Captures user input dynamically and presents results in a clear, structured format, enabling effective performance analysis and improvement.
